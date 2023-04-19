@@ -4,9 +4,12 @@ const app = express();
 let PORT = process.env.PORT || 3000;
 
 app.use(cors);
-
+app.use(express.json());
 app.get("/", (req, res) => {
   res.sendFile("./index.html");
+});
+app.get("/get", (req, res) => {
+  res.send("Hey Hello");
 });
 
 app.listen(PORT, () => {
