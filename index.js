@@ -5,8 +5,8 @@ let PORT = process.env.PORT || 3000;
 
 app.use(cors);
 
-app.get("/get", (req, res) => {
-  res.send("HEllO WORLD");
+app.get("/", (req, res) => {
+  res.sendFile("./index.html");
 });
 
 app.listen(PORT, () => {
